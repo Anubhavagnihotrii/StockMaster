@@ -19,8 +19,14 @@ public class login {
     {
         System.out.println("Inside the login form click");
 
+        String u1="anubhav";
+        String p1="agnihotri";
+        String u2="himanshu";
+        String p2="prasad";
+        String u3="admin";
+        String p3="pass";
 
-        if(username.equals("anubhav") && password.equals("agnihotri"))
+        if(username.equals(u1) && password.equals(p1) || username.equals(u2) && password.equals(p2) || username.equals(u3) && password.equals(p3))
         {
             return "/welcome";
         }
