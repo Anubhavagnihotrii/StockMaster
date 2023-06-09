@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class Home {
-    @RequestMapping(value = "index", method = RequestMethod.GET)
-    public String Home(Model model)
+    @GetMapping("Home")
+    public String Home()
     {
         System.out.println("Inside Index Controller Page");
         return "index";

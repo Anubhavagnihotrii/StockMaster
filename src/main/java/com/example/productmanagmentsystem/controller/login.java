@@ -13,7 +13,7 @@ public class login {
         System.out.println("Inside the Login Page");
         return "login";
     }
-    @PostMapping("/login")
+    @PostMapping("login")
     public String login_val(@RequestParam("username") String username , @RequestParam("password") String password)
     {
         System.out.println("Inside the login form click");
@@ -25,6 +25,7 @@ public class login {
         else
         {
             return "/login";
+
         }
 
     }
