@@ -1,13 +1,14 @@
 <!doctype html>
-<html xmlns:th="https://www.thymeleaf.org/">
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
+  <title>Product Management System</title>
 </head>
 <body>
   <div>
-      <section th:replace="/partials/header::header"></section>
+      <section th:replace="~{fragments/header::header}"></section>
   </div>
 
   <main>
@@ -35,7 +36,7 @@
 </main>
 
   <div>
-    <section th:replace="/partials/footer::footer"></section>
+    <section th:replace="~{/fragments/footer::footer}"></section>
   </div>
 </body>
 </html>
