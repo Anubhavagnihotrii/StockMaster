@@ -27,6 +27,7 @@ public class login {
 
         if(username.equals(u1) && password.equals(p1) || username.equals(u2) && password.equals(p2) || username.equals(u3) && password.equals(p3))
         {
+            System.out.println("inside the welcome page");
             return "/welcome";
         }
         else
