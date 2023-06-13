@@ -1,0 +1,27 @@
+
+product_code:Dell-i3-Inspiron product_name:Dell Inspiron15 product_company:DELL price:30000 Quantity:5
+product_code:NEW27 product_name:Bottle product_company:TupperWare price:500 Quantity:8
+product_code:jhvdvj product_name:jdbkjb product_company:hbdhb price:5 Quantity:88
+product_code:anubhav product_name:agnihotri product_company:agnihotri price:56 Quantity:56
+product_code:vejhvj product_name:hjbhdfb product_company:hdvv price:66 Quantity:121
+product_code:djbh product_name:fhbdj product_company:hsdb price:44 Quantity:55
+product_code:djgvgv product_name:vjdvj product_company:uygydv price:6545 Quantity:55665
+product_code:dell product_name:dell product_company:edell price:45 Quantity:54
+product_code:dfds product_name:dcs product_company:ds price:34 Quantity:32
+product_code:whbdh product_name:hjjg product_company:jhgh price:6767 Quantity:877
+product_code:anun product_name:huihu product_company:hin price:8987 Quantity:877
+product_code:saas product_name:bhbbh product_company:bhbih price:778 Quantity:8787
+product_code:hbhb product_name:bkjbkjn product_company:jbkbj price:776 Quantity:78
+product_code:sac product_name:dcs product_company:sda price:123 Quantity:11
+product_code:sac product_name:dcs product_company:sda price:123 Quantity:11
+product_code:sac product_name:dcs product_company:sda price:123 Quantity:11
+product_code:sac product_name:dcs product_company:sda price:123 Quantity:11
+product_code:abcd product_name:abcd product_company:abcd price:213 Quantity:12
+product_code:sxbkb product_name:jhvjb product_company:jhbjhb price:78 Quantity:87
+product_code:sxbkb product_name:jhvjb product_company:jhbjhb price:78 Quantity:87
+product_code:sxbkb product_name:jhvjb product_company:jhbjhb price:78 Quantity:87
+product_code:ds product_name:sd product_company:sadS price:121 Quantity:21
+product_code:dsbb product_name:hjbb product_company:hjbbh78 price:78 Quantity:78
+product_code:hjdshj product_name:gghi product_company:guhbu price:78 Quantity:8
+product_code:dvcv product_name:vg product_company:hjbjhb price:67 Quantity:87
+product_code:vsv product_name:jb product_company:bb price:77 Quantity:78
