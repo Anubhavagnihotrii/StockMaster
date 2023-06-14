@@ -30,6 +30,7 @@ public class login {
         {
             System.out.println("inside the welcome page");
             model.addAttribute("success","Logged in Sucessfully !");
+            model.addAttribute("logedin","Welcome"+username);
             return "/welcome";
 
         }

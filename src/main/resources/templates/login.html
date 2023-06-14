@@ -8,14 +8,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
     <title>login</title>
 </head>
-<body>
+<body class="bg-emerald-100">
 <div>
     <section th:replace="~{/fragments/header::header}"></section>
 </div>
 
-    <div th:if="${failure}">
+<div th:if="${failure}">
         <div th:replace="~{/fragments/alerts::anubhav}"></div>
-    </div>
+</div>
+
 
 <main>
     <section class="text-gray-600 body-font">
