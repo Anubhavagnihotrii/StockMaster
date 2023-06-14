@@ -1,3 +1,5 @@
 
 
 
+
+product_code:123 product_name:Bottle product_company:Tupperware price:250 Quantity:10
