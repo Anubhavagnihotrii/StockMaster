@@ -1,13 +1,14 @@
 <!doctype html>
-<html xmlns:th="https://www.thymeleaf.org/">
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <title>login</title>
 </head>
 <body>
 <div>
-    <section th:replace="/partials/header::header"></section>
+    <section th:replace="~{/fragments/header::header}"></section>
 </div>
 
 <main>
@@ -19,7 +20,7 @@
             </div>
             <div class="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
                 <h2 class="text-gray-900 text-lg font-medium title-font mb-5">Log in</h2>
-                <form action="/login"method="post">
+                <form action="/login" method="post">
                 <div class="relative mb-4">
                     <label for="username" class="leading-7 text-sm text-gray-600">Username</label>
                     <input type="text" id="username" name="username" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
