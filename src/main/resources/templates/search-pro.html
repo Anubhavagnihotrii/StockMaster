@@ -18,6 +18,11 @@
     <div th:replace="~{/fragments/alerts::section}"></div>
   </section>
 </div>
+<div>
+  <section th:if="${failure}">
+    <div th:replace="~{fragments/alerts::anubhav}"></div>
+  </section>
+</div>
 
 <div>
   <section th:if="${failure}">
@@ -34,8 +39,8 @@
       <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
 
         <div class="bg-lime-300 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
-          <h2 class="text-gray-900 text-3xl text-center font-medium title-font mb-5">Enter the Product Modification Details</h2>
-          <form action="/del-pro" method="post">
+          <h2 class="text-gray-900 text-3xl text-center font-medium title-font mb-5">Enter the Product Details to Search</h2>
+          <form action="/search-pro" method="post">
             <div class="relative mb-4">
               <label for="product-code" class="leading-7 text-sm text-gray-600">Product Code</label>
               <input type="text" id="product-code" name="product-code" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
