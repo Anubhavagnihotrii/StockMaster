@@ -25,6 +25,8 @@ public class login {
         String p2="prasad";
         String u3="admin";
         String p3="pass";
+        String u4="Abdur";
+        String p4="abcd1234";
 
         if(username.equals(u1) && password.equals(p1) || username.equals(u2) && password.equals(p2) || username.equals(u3) && password.equals(p3))
         {
