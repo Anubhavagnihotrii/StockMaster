@@ -28,7 +28,7 @@ public class login {
         String u4="Abdur";
         String p4="abcd1234";
 
-        if(username.equals(u1) && password.equals(p1) || username.equals(u2) && password.equals(p2) || username.equals(u3) && password.equals(p3))
+        if(username.equalsIgnoreCase(u1) && password.equalsIgnoreCase(p1) || username.equalsIgnoreCase(u2) && password.equalsIgnoreCase(p2) || username.equals(u3) && password.equalsIgnoreCase(p3)||username.equalsIgnoreCase(u4) && password.equalsIgnoreCase(p4))
         {
             System.out.println("inside the welcome page");
             model.addAttribute("success","Logged in Sucessfully !");
