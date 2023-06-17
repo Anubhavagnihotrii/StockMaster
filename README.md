@@ -18,3 +18,7 @@ These operations include
 - modifying existing product details, 
 - removing products, and 
 - retrieving product information.
+
+## License
+
+This project is licensed under the terms of the MIT License. See the [LICENSE](LICENSE) file for details.
