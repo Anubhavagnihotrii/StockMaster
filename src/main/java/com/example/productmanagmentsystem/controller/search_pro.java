@@ -45,7 +45,8 @@ public class search_pro {
 
         if (foundLine != null) {
             log.info("Found: " + foundLine);
-            model.addAttribute("success","Data Founded "+foundLine);
+            model.addAttribute("success","Data Founded ");
+            model.addAttribute("success_msg","Data Founded ! "+foundLine);
         } else {
            log.info("Data not found.");
            model.addAttribute("failure","Record is  not present");
