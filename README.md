@@ -1,6 +1,5 @@
 # Product-Management-System
 
-
 The Product Management System is a software application that facilitates the management and organization
 of product-related information using a file storage approach. **Instead of relying on a traditional database
 system, the system leverages file storage as a means to store and retrieve product data.** The system enables
@@ -20,4 +19,6 @@ These operations include
 - removing products, and 
 - retrieving product information.
 
+## License
 
+This project is licensed under the terms of the MIT License. See the [LICENSE](LICENSE) file for details.
