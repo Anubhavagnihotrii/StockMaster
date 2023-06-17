@@ -1,7 +1,6 @@
+product_code:pepsi2023 product_name:CocaCola product_company:Pepsi price:100 Quantity:5
+product_code:SamsungS23 product_name:SAMSUNG S23 ULTRA product_company:Samsung-India price:50000 Quantity:5
 
 
-
-
-
-
-
+product_code:WatchS product_name:RealmeWatch product_company:Realme price:5000 Quantity:5
+product_code:123 product_name:233` product_company:yuhvu price:7676 Quantity:786

@@ -8,7 +8,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
     <title>Welcome</title>
 </head>
-<body class="bg-lime-200">
+<body>
+<section class="bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply">
 <div>
     <section th:replace="~{/fragments/header2::header}"></section>
 </div>
@@ -17,26 +18,21 @@
     <section th:replace="~{/fragments/alerts::section}"></section>
 </div>
 
-<div>
-    <section th:if="${logedin}">
-        <p th:text="${logedin}"></p>
-    </section>
-</div>
 <main>
-    <section class="text-gray-600 body-font">
+    <section class="text-gray-100 body-font">
         <div class="container px-5 py-20 mx-auto">
             <div class="flex flex-wrap -m-9">
                 <div class="p-4 md:w-1/3">
-                    <div class="h-full border-2 border-lime-100 border-opacity-60 rounded-lg overflow-hidden bg-lime-300">
+                    <div class="h-full border-2 border-gray-100 border-opacity-60 rounded-lg overflow-hidden p-5">
                         <img class="lg:h-48 md:h-36 h-auto  w-full object-contain object-center" src="/static/images/cart.png" alt="unable to load the image" loading="lazy">
-                        <hr class="border-t-2 border-lime-200 my-4">
+                        <hr class="border-t-2 border-gray-300 my-4">
                         <div class="p-5">
-                            <h2 class="tracking-widest text-xs title-font font-medium text-gray-900 mb-1">PMS</h2>
-                            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Add Products</h1>
+                            <h2 class="tracking-widest text-xs title-font font-medium text-gray-100 mb-1">PMS</h2>
+                            <h1 class="title-font text-lg font-medium text-gray-100 mb-3">Add Products</h1>
                             <p class="leading-relaxed mb-3">Add Products, Amplify Your Experience !</p> <br />
                             <div class="flex items-center flex-wrap ">
                                 <a href="/add-pro" >
-                                    <button class="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">Add Products</button>
+                                    <button class="inline-flex text-white bg-blue-700 border-0 py-2 px-6 focus:outline-none hover:bg-blue-700 rounded text-lg">Add Products</button>
                                 </a>
 
                             </div>
@@ -44,30 +40,31 @@
                     </div>
                 </div>
                 <div class="p-4 md:w-1/3">
-                    <div class="h-full border-2 border-lime-100 border-opacity-60 rounded-lg overflow-hidden bg-lime-300">
+                    <div class="h-full border-2 border-gray-100 border-opacity-60 rounded-lg overflow-hidden p-5">
                         <img class="lg:h-48 md:h-36 w-full object-contain object-center" src="/static/images/rm-cart.png" alt="unable to load the image" loading="lazy">
-                        <hr class="border-t-2 border-lime-200 my-4">
+                        <hr class="border-t-2 border-gray-100 my-4">
                         <div class="p-6">
-                            <h2 class="tracking-widest text-xs title-font font-medium text-gray-900 mb-1">PMS</h2>
-                            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Delete Products</h1>
+                            <h2 class="tracking-widest text-xs title-font font-medium text-gray-100 mb-1">PMS</h2>
+                            <h1 class="title-font text-lg font-medium text-gray-100 mb-3">Delete Products</h1>
                             <p class="leading-relaxed mb-3">Clear your cart clutter with a simple click !</p>
                             <br />
                             <div class="flex items-center flex-wrap">
                                 <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0" href="/del-pro">
-                                    <button class="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-700 rounded text-lg">Delete Products</button>
+                                    <button class="inline-flex text-white bg-blue-700 border-0 py-2 px-6 focus:outline-none hover:bg-blue-800 rounded text-lg">Delete Products</button>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="p-4 md:w-1/3">
-                    <div class="h-full border-2 border-lime-100 border-opacity-60 rounded-lg overflow-hidden bg-lime-300">
-                        <img class="lg:h-48 md:h-36 w-full object-contain object-center" src="/static/images/update-cart.png" alt="blog">
-                        <hr class="border-t-2 border-lime-200 my-4">
+                    <div class="h-full border-2 border-lime-100 border-opacity-60 rounded-lg overflow-hidden p-5">
+                        <img class="lg:h-48 md:h-36 w-full object-contain object-center" src="/static/images/search-cart.png" alt="blog">
+                        <hr class="border-t-2 border-gray-100 my-4">
                         <div class="p-6">
-                            <h2 class="tracking-widest text-xs title-font font-medium text-gray-900 mb-1">PMS</h2>
-                            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Search Products</h1>
-                            <p class="leading-relaxed mb-3">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                            <h2 class="tracking-widest text-xs title-font font-medium text-gray-100 mb-1">PMS</h2>
+                            <h1 class="title-font text-lg font-medium text-gray-100 mb-3">Search Products</h1>
+                            <p class="leading-relaxed mb-3">"Find. Modify. Customize."</p>
+                            <br />
                             <div class="flex items-center flex-wrap ">
                                 <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0" href="/search-pro">
                                     <button class="inline-flex text-white bg-blue-700 border-0 py-2 px-6 focus:outline-none hover:bg-blue-800 rounded text-lg">Search Products</button>
@@ -81,6 +78,6 @@
     </section>
 </main>
 
-
+</section>
 </body>
 </html>
