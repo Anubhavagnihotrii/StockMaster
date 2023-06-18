@@ -61,14 +61,17 @@ public class mod_pro {
             if (found) {
                 if (inputFile.delete()) {
                     if (tempFile.renameTo(inputFile)) {
+                        model.addAttribute("success","Data modified and saved successfully.");
                         log.info("Data modified and saved successfully.");
                     } else {
+                        model.addAttribute("failure","Unable to Modify the Data.");
                         log.info("Failed to rename temp file to the original file name.");
                     }
                 } else {
                     log.info("Failed to delete the original file.");
                 }
             } else {
+                model.addAttribute("failure","Unable to Modify the Data.");
                 log.info("Data not found.");
             }
 
