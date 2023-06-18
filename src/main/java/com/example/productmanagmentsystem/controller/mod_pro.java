@@ -13,45 +13,68 @@ import java.io.*;
 @Controller
 public class mod_pro {
     @GetMapping("modify-product")
-    public String mod_page()
-    {
+    public String mod_page() {
         log.info("inside modify page");
         return "modify-pro";
     }
-    @PostMapping("modify-pro")
-    public String mod_product(@RequestParam("product-code") String m_product_code, @RequestParam("product-name") String m_product_name, @RequestParam("product-company") String m_product_company, @RequestParam("product-price")long m_product_price, @RequestParam("product-quantity")long m_product_quantity, Model model)
-    {
-        log.info("product to be modified having code"+m_product_code);
 
-        String data_to_modify ="product_code:"+m_product_code+" product_name:"+m_product_name+" product_company:"+m_product_company+" price:"+m_product_price+" Quantity:"+m_product_quantity;
+    @PostMapping("modify-pro")
+    public String mod_product(
+            @RequestParam("product-code") String m_product_code,
+            @RequestParam("product-name") String m_product_name,
+            @RequestParam("product-company") String m_product_company,
+            @RequestParam("product-price") long m_product_price,
+            @RequestParam("product-quantity") long m_product_quantity,
+            Model model
+    ) {
+        log.info("product to be modified having code" + m_product_code);
+
+        String data_to_modify = "product_code:" + m_product_code +
+                " product_name:" + m_product_name +
+                " product_company:" + m_product_company +
+                " price:" + m_product_price +
+                " Quantity:" + m_product_quantity;
 
         try {
-            File file = new File("products.txt");
+            File inputFile = new File("products.txt");
+            File tempFile = new File("temp.txt");
 
-            RandomAccessFile raf = new RandomAccessFile(file, "rw");
+            BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+            BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
 
             String line;
-            long foundPosition = -1;
-            while ((line = raf.readLine()) != null) {
+            boolean found = false;
+
+            while ((line = reader.readLine()) != null) {
                 if (line.contains(m_product_code)) {
-                    foundPosition = raf.getFilePointer() - line.length(); // Adjust the position
-                    break;
+                    found = true;
+                    writer.write(data_to_modify);
+                } else {
+                    writer.write(line);
                 }
+                writer.newLine();
             }
 
-            if (foundPosition != -1) {
-                raf.seek(foundPosition); // Move to the position of the found line
-                raf.writeBytes(data_to_modify); // Write the new data
-                log.info("Data modified and saved successfully.");
+            reader.close();
+            writer.close();
+
+            if (found) {
+                if (inputFile.delete()) {
+                    if (tempFile.renameTo(inputFile)) {
+                        log.info("Data modified and saved successfully.");
+                    } else {
+                        log.info("Failed to rename temp file to the original file name.");
+                    }
+                } else {
+                    log.info("Failed to delete the original file.");
+                }
             } else {
                 log.info("Data not found.");
             }
 
-            raf.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
-
 
         return "modify-pro";
     }

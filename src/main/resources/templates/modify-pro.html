@@ -17,7 +17,11 @@
   <div th:if="${success}">
     <section th:replace="~{/fragments/alerts::section}"></section>
   </div>
-
+  <div>
+    <section th:if="${failure}">
+      <div th:replace="~{fragments/alerts::anubhav}"></div>
+    </section>
+  </div>
   <main>
     <section class="text-gray-100 body-font">
       <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
