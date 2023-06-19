@@ -11,6 +11,7 @@ import java.io.*;
 @Slf4j
 @Controller
 public class search_pro {
+
     @GetMapping("search-pro")
     public  String search_products()
     {
@@ -22,7 +23,6 @@ public class search_pro {
         log.info(product_code);
         log.info(product_name);
 
-        Boolean findd = false;
         String foundLine = null;
         try {
             File file = new File("products.txt");
@@ -46,7 +46,7 @@ public class search_pro {
         if (foundLine != null) {
             log.info("Found: " + foundLine);
             model.addAttribute("success","Data Founded ");
-            model.addAttribute("success_msg","Data Founded ! "+foundLine);
+            model.addAttribute("success_msg",foundLine);
         } else {
            log.info("Data not found.");
            model.addAttribute("failure","Record is  not present");

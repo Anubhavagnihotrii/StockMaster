@@ -14,7 +14,7 @@
     <section th:replace="~{/fragments/header2::header}"></section>
 </div>
 
-<div>
+<div th:if="${success}">
     <section th:replace="~{/fragments/alerts::section}"></section>
 </div>
 

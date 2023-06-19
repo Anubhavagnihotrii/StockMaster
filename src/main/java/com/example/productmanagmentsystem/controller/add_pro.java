@@ -28,7 +28,7 @@ public class add_pro {
       String data ="product_code:"+product_code+" product_name:"+product_name+" product_company:"+product_company+" price:"+product_price+" Quantity:"+product_quantity;
       FileWriter fw = new FileWriter("products.txt",true);
 
-      fw.write("\n"+data);
+      fw.write("\n\n"+data);
       fw.close();
       System.out.println("data inserted successfully");
 
