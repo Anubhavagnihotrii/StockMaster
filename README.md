@@ -1,6 +1,6 @@
-# Product-Management-System
+# StockMater
 
-The Product Management System is a software application that facilitates the management and organization
+StockMaster is a software application that facilitates the management and organization
 of product-related information using a file storage approach. **Instead of relying on a traditional database
 system, the system leverages file storage as a means to store and retrieve product data.** The system enables
 businesses to efficiently track and maintain information about their products, including details such as name,
@@ -19,6 +19,4 @@ These operations include
 - removing products, and 
 - retrieving product information.
 
-## License
 
-This project is licensed under the terms of the MIT License. See the [LICENSE](LICENSE) file for details.
