@@ -1,46 +1,51 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
-  <title>Display File</title>
-</head>
-<body>
-<section class="bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply">
-  <div>
-    <section th:replace="~{/fragments/header2::header}"></section>
-  </div>
-
-<main>
-  <section class="text-gray-600 body-font">
-    <h2 class="text-4xl font-extrabold dark:text-white text-center">Contents of the file.</h2>
-
-    <div class="container px-5 py-24 mx-auto">
-      <div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
-        <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-          <div class="text-gray-100 text-lg title-font font-medium mb-2">
-          <ul>
-            <li th:each="line : ${fileContents}" th:text="${line}"></li>
-          </ul>
-          </div>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+    <title>Display File</title>
+  </head>
+  <body>
+    <section
+      class="bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply"
+    >
+      <div>
+        <section th:replace="~{/fragments/header2::header}"></section>
       </div>
 
+      <main>
+        <section class="text-gray-600 body-font">
+          <h2 class="text-4xl font-extrabold dark:text-white text-center">
+            Contents of the file.
+          </h2>
 
+          <div class="container px-5 py-24 mx-auto">
+            <div
+              class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col"
+            >
+              <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+                <div class="text-gray-100 text-lg title-font font-medium mb-2">
+                  <ul>
+                    <li th:each="line : ${fileContents}" th:text="${line}"></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
 
-
-    </div>
-  </section>
-</main>
-
-  <br/>
-  <br/>
-  <div>
-    <section th:replace="~{/fragments/footer::footer}"></section>
-  </div>
-</section>
-</body>
+      <br />
+      <br />
+      <div>
+        <section th:replace="~{/fragments/footer::footer}"></section>
+      </div>
+    </section>
+  </body>
 </html>

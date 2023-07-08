@@ -25,8 +25,7 @@ public class mod_pro {
             @RequestParam("product-company") String m_product_company,
             @RequestParam("product-price") long m_product_price,
             @RequestParam("product-quantity") long m_product_quantity,
-            Model model
-    ) {
+            Model model) {
         log.info("product to be modified having code" + m_product_code);
 
         String data_to_modify = "product_code:" + m_product_code +
@@ -61,17 +60,17 @@ public class mod_pro {
             if (found) {
                 if (inputFile.delete()) {
                     if (tempFile.renameTo(inputFile)) {
-                        model.addAttribute("success","Data modified and saved successfully.");
+                        model.addAttribute("success", "Data modified and saved successfully.");
                         log.info("Data modified and saved successfully.");
                     } else {
-                        model.addAttribute("failure","Unable to Modify the Data.");
+                        model.addAttribute("failure", "Unable to Modify the Data.");
                         log.info("Failed to rename temp file to the original file name.");
                     }
                 } else {
                     log.info("Failed to delete the original file.");
                 }
             } else {
-                model.addAttribute("failure","Unable to Modify the Data.");
+                model.addAttribute("failure", "Unable to Modify the Data.");
                 log.info("Data not found.");
             }
 

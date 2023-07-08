@@ -15,17 +15,15 @@ import java.util.List;
 @Controller
 public class del_pro {
     @GetMapping("del-pro")
-    public String del_product()
-    {
+    public String del_product() {
         return "del-pro";
     }
 
     @PostMapping("del-pro")
-    public String delete_pro(@RequestParam("product-code") String product_code,@RequestParam("product-name") String product_name, Model model)
-    {
+    public String delete_pro(@RequestParam("product-code") String product_code,
+            @RequestParam("product-name") String product_name, Model model) {
         System.out.println(product_code);
         System.out.println(product_name);
-
 
         try {
             List<String> lines = Files.readAllLines(Paths.get("products.txt"));
@@ -56,16 +54,13 @@ public class del_pro {
                 writer.close();
                 System.out.println("Matching record(s) deleted successfully.");
 
-                model.addAttribute("success","Product deleted Successfully");
-            }
-            else {
+                model.addAttribute("success", "Product deleted Successfully");
+            } else {
                 System.out.println("No matching record found. No changes were made to the file.");
-                model.addAttribute("failure","No matching record found.");
+                model.addAttribute("failure", "No matching record found.");
             }
 
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             e.getStackTrace();
         }
         return "del-pro";
