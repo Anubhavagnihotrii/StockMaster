@@ -15,8 +15,7 @@ import java.util.List;
 @Controller
 public class display {
     @GetMapping("Display_File")
-    public String displayFile(  Model model)
-    {
+    public String displayFile(Model model) {
         log.info("inside display file page");
 
         List<String> fileContents = new ArrayList<>();
@@ -31,11 +30,10 @@ public class display {
             e.printStackTrace();
         }
 
-        model.addAttribute("fileContents",fileContents);
+        model.addAttribute("fileContents", fileContents);
 
-
-//        String content =fileContents.toString();
-//        log.info(content);
+        // String content =fileContents.toString();
+        // log.info(content);
         return "displayFile";
     }
 }
