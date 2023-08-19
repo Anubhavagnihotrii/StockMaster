@@ -1,4 +1,4 @@
-# StockMater
+# StockMaster
 
 StockMaster is a software application that facilitates the management and organization
 of product-related information using a file storage approach. **Instead of relying on a traditional database
