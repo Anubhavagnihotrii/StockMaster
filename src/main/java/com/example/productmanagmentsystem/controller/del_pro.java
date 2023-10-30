@@ -24,7 +24,6 @@ public class del_pro {
             @RequestParam("product-name") String product_name, Model model) {
         System.out.println(product_code);
         System.out.println(product_name);
-
         try {
             List<String> lines = Files.readAllLines(Paths.get("products.txt"));
 
